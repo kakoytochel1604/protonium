@@ -32,5 +32,5 @@ A simple package installer for Linux and FreeBSD. Install, search, and update pa
 ```bash
 git clone https://github.com/Asterlenist/protonium.git
 cd protonium
-g++ main.cpp -o protonium
+g++ main.cpp SystemDetector.cpp SystemDetector.h -o protonium
 ./protonium
