@@ -8,7 +8,7 @@ A simple package installer for Linux and FreeBSD. Install, search, and update pa
 
 - Debian / Ubuntu / Mint (APT)
 - Fedora (DNF)
-- Arch / Manjaro / EndeavourOS (PACMAN + AUR)
+- Arch / Manjaro / EndeavourOS / etc Arch-Based (PACMAN + AUR)
 - openSUSE (ZYPPER)
 - FreeBSD (PKG, doas/root)
 
