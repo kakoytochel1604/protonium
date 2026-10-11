@@ -1,11 +1,11 @@
-// Supported OS: debian, ubuntu, linuxmint, fedora, archlinux, manjaro, endeavouros, opensuse(-tumbleweed,-leap), freebsd
+// Supported OS: debian, ubuntu, linuxmint, fedora, archlinux, manjaro, endeavouros, opensuse(-tumbleweed,-leap), freebsd, cachyos
 #include <iostream>
 #include <string>
 #include <cstdlib>
 #include "SystemDetector.h"
 using namespace std;
 
-string ver = "v0.51";
+string ver = "v0.52 (Final Patch)";
 SystemInfo sys = detectSystem();
 string selectedOS = sys.id;
 string selectedParagraph;
@@ -92,12 +92,12 @@ int main() {
             }
         }
     }
-    else if (selectedOS == "archlinux" || selectedOS == "manjaro" || selectedOS == "endeavouros") {
+    else if (selectedOS == "arch" || selectedOS == "manjaro" || selectedOS == "endeavouros" || selectedOS == "cachyos") {
         cout << "[1] - Install from PACMAN\n";
         cout << "[2] - Search package from PACMAN\n";
         cout << "[3] - Update the system\n";
         cout << "[4] - Install from Flatpak\n";
-        cout << "[5] - Install yay (recommended for arch)\n";
+        cout << "[5] - Install yay (recommended for arch, cachyos)\n";
         cout << "> ";
         cin >> selectedParagraph;
 
@@ -117,7 +117,7 @@ int main() {
                 break;
             }
             case '3': {
-                system("sudo pacman -Syu");
+                system("sudo pacman -Syu ");
                 break;
             }
             case '4': {
